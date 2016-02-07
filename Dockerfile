@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:edge
 MAINTAINER Daniel Guerra
 #meta container, we want fresh builds
 ONBUILD RUN apk update
