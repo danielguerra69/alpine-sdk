@@ -10,5 +10,6 @@ ONBUILD RUN echo "sdk    ALL=(ALL) ALL" >> /etc/sudoers
 ONBUILD RUN chmod g+w /var/cache/distfiles/
 ONBUILD RUN sudo addgroup sdk abuild
 ONBUILD USER sdk
-ONBUILD WORKDIR /home/sdk
+ONBUILD WORKDIR /tmp
 ONBUILD RUN git clone git://dev.alpinelinux.org/aports
+ONBUILD WORKDIR /home/sdk
