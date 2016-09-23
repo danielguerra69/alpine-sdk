@@ -2,7 +2,7 @@ FROM alpine:3.1
 MAINTAINER Daniel Guerra
 #meta container, we want fresh builds
 ONBUILD RUN apk update
-ONBUILD RUN apk add alpine-sdk
+ONBUILD RUN apk add alpine-sdk autoconf
 ONBUILD RUN addgroup sdk
 ONBUILD RUN adduser  -G sdk -s /bin/sh -D sdk
 ONBUILD RUN echo "sdk:sdk"| /usr/sbin/chpasswd
