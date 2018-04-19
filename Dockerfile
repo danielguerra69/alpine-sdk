@@ -11,5 +11,5 @@ ONBUILD RUN chmod g+w /var/cache/distfiles/
 ONBUILD RUN sudo addgroup sdk abuild
 ONBUILD USER sdk
 ONBUILD WORKDIR /tmp
-ONBUILD RUN git clone --recursive https://github.com/alpinelinux/aports.git
+ONBUILD RUN git clone --branch 3.3-stable --recursive https://github.com/alpinelinux/aports.git
 ONBUILD WORKDIR /home/sdk
